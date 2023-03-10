@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portpolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bee591082f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+    <div class="container">
+            <nav>
+                <img src="Images/logo-1-removebg-preview.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>python programmer (Learning)</h1>
+                <h1>Hi, I'm <br><span>Jalal Ebna Shakib</span></h1>
+                <h2>I am Still <span>Learning.</span></h2>
+
+            </div>
+        </div>
+    </div>   
+ <!-----------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG20230302132644.jpg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Jalal Ebna Shakib, a Student  from Daffodil International University.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certificate')">Certificate</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>python programming</li>
+                            <li><span>research</span><br>machine learning<br>artificial intelligence<br>image processing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificate">
+                        <ul>
+                            <li><span>CV Writing for Professionals</span><br>S M Ahbabur Rahman (Career Coach, Corporate Trainer,<br> Deputy General Manager- Human Resources of Pandughar Group, <br> 14+ years of professional experience in HR Management).</li>
+                            <li><span>Module 3: Market Research & Market sizing</span><br> Conducted by Zahedul Amin (LinkedIn Profile),<br> Co-founder at LightCastle Partners, provide insights into<br> market investment decisions and aim to explore the potential<br> of a market in terms of size and profitability.</li>
+                            <li><span>Leadership Skills</span><br>Conducted by Grameenphone Academy.</li>
+                            <li><span>Automation - The Future Workplace</span><br>Conducted by Grameenphone Academy.</li>
+                            <li><span>Optimisation using artificial intelligence: Hill Climb algorithm</span><br>Conducted by GoEdu.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Daffodil International University</span><br> Ashulia, Savar, Dhaka, Bangladesh <br>January 2021 to going</li>
+                            <li><span>Shaheen college</span><br> Registry Para, Tangail<br>January 2016 to April 2018.</li>
+                            <li><span>Shaheen school</span><br> Registry Para, Tangail<br>January 2012 to January 2016.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------------portfolio-------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My works </h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/is1.jpg">
+                <div class="layer">
+                    <h3>Python based project for class</h3>
+                    <p>This Project helps you to process the Images and predect the Answer.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/Cl2.jpeg">
+                <div class="layer">
+                    <h3>Simple Game bild using Unity</h3>
+                    <h4>The Car</h4>
+                    <p>This Project connects you the realistic 
+                    scenario on object(Cars) helps of augmentedreality</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/960x0.jpg">
+                <div class="layer">
+                    <h3>Coding(Sometime Not everyDay)</h3>
+                    <p>Try to not forget what i have learn(.....)</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="container">
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+      </section>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>
